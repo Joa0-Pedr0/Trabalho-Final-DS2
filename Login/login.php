@@ -1,7 +1,7 @@
 <?php
 include_once ('conexao.php');
 
-if(isset($_POST['email']) || isset($_POST['senha'])){
+if(isset($_POST['email']) && isset($_POST['senha'])){
     if(empty($_POST['email'])) {
         echo "Preencha seu e-mail";
     }
@@ -13,7 +13,11 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
         $senha = $_POST['senha'];
 
         $sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
-        $sql_query = $conexao->query($sql_code) or die("Falha na execução: " . $conexao->error);
+        try {
+                $sql_query = $conexao->query($sql_code);
+            } catch (PDOException $e) {
+                die("Falha na execução: " . $e->getMessage());
+            }
 
         $quantidade = $sql_query->rowCount();
 
