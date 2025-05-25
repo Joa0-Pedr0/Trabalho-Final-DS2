@@ -6,49 +6,66 @@ body {
   background-color: #cddcff;
 }
 
-.login-container {
+#caixa-principal {
   display: flex;
   height: 100vh;
 }
 
-.login-box {
+#Logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#Logo-img {
+  width: 70px;
+  height: 70px;
+}
+
+
+#caixa-login {
   width: 50%;
   background-color: #f7f7f7;
   border-radius: 10px;
   padding: 40px;
   margin: auto;
-  max-width: 400px;
+  max-width: 450px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.login-box h2 {
+#caixa-login h2 {
   font-size: 40px;
   margin-bottom: 20px;
 }
 
-.login-box input {
-  width: 100%;
+#caixa-login input {
+  width: 95%;
   padding: 12px;
   margin: 10px 0;
   border: none;
-  background-color: #d9e6ff;
+  background-color: #C1D3FE;
   border-radius: 5px;
   font-size: 14px;
 }
 
-.signup-text {
+.campo {
+  text-align: left; 
+  margin-bottom: 20px;
+}
+
+#texto-cadastro {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
   font-size: 14px;
-  margin: 10px 0;
 }
 
-.signup-text a {
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-}
-
-.login-button {
+#botao-login {
   margin-top: 15px;
   padding: 10px 20px;
   background-color: #b1cfff;
@@ -60,11 +77,11 @@ body {
   width: 30%;
 }
 
-.login-button:hover {
+#botao-login:hover {
   background-color: #a1c0f9;
 }
 
-.welcome-box {
+#caixa-secundaria {
   width: 40%;
   background-color: #b1cfff;
   display: flex;
@@ -76,40 +93,22 @@ body {
   justify-content: flex-start;
 }
 
-.welcome-box h1 {
+#caixa-secundaria h1 {
   font-size: 40px;
   margin-bottom: 1px;
   line-height: 1;
 }
 
-.welcome-box p {
+#caixa-secundaria p {
   font-size: 20px;
   margin-bottom: 4px;
   line-height: 100%;
   line-height: 0.3;
 }
 
-.welcome-box img {
+#caixa-secundaria img {
   width: 100%;
   height: 100%;
   max-height: 400px;
   max-width: 400px;
-}
-
-.Logo-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: white;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-
-}
-
-.Logo-img {
-  width: 70px;
-  height: 70px;
 }
