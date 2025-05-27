@@ -5,5 +5,6 @@ if(!isset($_SESSION)) {
 }
 
 if(!isset($_SESSION['id'])) {
-    die("Voce não pode acessar pois não esta logado!. <p> <a href=\"index.php\">Entrar</a></p>");
+    header ('Location: Login/formula.php');
 }
+?>
