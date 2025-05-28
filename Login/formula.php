@@ -21,12 +21,22 @@ include_once ('login.php');
                 <div id ="Logo-container">
                     <img src="../css/imagens/logo_sem_fundo_azul.png" alt="Logo" id="Logo-img">
                 </div>
+
             <div id = "caixa-login">
+                <div id = "error">
+                    <?php 
+                        if (isset($error)) {
+                            if (!empty($error)) {
+                                echo $error;
+                            }
+                        }
+                    ?>
+                </div>
                 <h2>Login</h2>
 
                 <div class = "campo">
                         <label for="email">Digite seu email:</label>
-                        <input type="text" name = "email" id = "email" placeholder = "Email">
+                        <input type="email" name = "email" id = "email" placeholder = "Email">
                 </div>
 
                 <div class = "campo">
