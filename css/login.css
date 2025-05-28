@@ -110,3 +110,7 @@ body {
   max-height: 400px;
   max-width: 400px;
 }
+
+#error {  
+  color: rgba(42, 81, 208, 0.815);
+}
