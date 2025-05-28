@@ -3,10 +3,10 @@ include_once ('conexao.php');
 
 if(isset($_POST['email']) && isset($_POST['senha'])){
     if(empty($_POST['email'])) {
-        echo "Preencha seu e-mail";
+        $error = "Preencha seu e-mail!";
     }
     else if(empty($_POST['senha'])) {
-        echo "Preencha sua senha";
+        $error =   "Preencha sua senha!";
     }
     else {
         $email = $_POST['email'];
@@ -35,7 +35,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
             header("Location: ../index.php");
 
         } else {
-            echo "Falha ao logar! E-mail ou senha erradas";
+            $error = "Falha ao logar! E-mail ou senha erradas";
         }
     }
 }
