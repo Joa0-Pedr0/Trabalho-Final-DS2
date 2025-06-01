@@ -10,7 +10,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
     }
     else {
         $email = $_POST['email'];
-        $senha = $_POST['senha'];
+        $senha = trim($_POST['senha']);
 
         $sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
         try {
