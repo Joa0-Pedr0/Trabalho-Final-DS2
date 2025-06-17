@@ -1,7 +1,6 @@
 <?php
 require_once('conexao.php');
 
-// Busca os pacientes
 $stmt = $conexao->query("SELECT paciente_id, nome_paciente FROM paciente");
 $pacientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -9,6 +8,7 @@ $pacientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
+    <link rel="stylesheet" href="../css/read_pacientes.css">
     <meta charset="UTF-8">
     <title>Pacientes</title>
     <script>
@@ -22,8 +22,8 @@ $pacientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
     <h2>Pacientes Cadastrados</h2>
-
-    <table border="1" cellpadding="5" cellspacing="0">
+<div class="container">
+<table border="1" cellpadding="5" cellspacing="0">
         <thead>
             <tr>
                 <th>ID</th>
@@ -37,13 +37,15 @@ $pacientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= htmlspecialchars($paciente['paciente_id']) ?></td>
                     <td><?= htmlspecialchars($paciente['nome_paciente']) ?></td>
                     <td>
-                        <button onclick="confirmarExclusao(<?= $paciente['paciente_id'] ?>)">Excluir</button>
-                        <button>Editar</button>
+                        <button  class="btn-editar">Editar</button>
+                        <button  class="btn-excluir" onclick="confirmarExclusao(<?= $paciente['paciente_id'] ?>)">Excluir</button>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+</div>
+    
 
 </body>
 </html>
