@@ -13,6 +13,14 @@ include_once 'paciente_cadastro.php';
 
 <body>
     <form method="post">
+        <?php
+        if (isset($error)) {
+            if (!empty($error)) {
+                echo $error;
+            }
+        }
+
+        ?>
         <label for="nome">Nome completo</label>
         <input type="text" id="nome" name="nome" placeholder="Nome do paciente">
         <label for="data">Data de Nascimento</label>
