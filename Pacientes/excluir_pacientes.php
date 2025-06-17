@@ -9,7 +9,5 @@ if (isset($_GET['id'])) {
         $stmt->execute([$id]);
     }
 }
-
-// Redireciona de volta pra lista
 header("Location: read_pacientes.php");
 exit;
