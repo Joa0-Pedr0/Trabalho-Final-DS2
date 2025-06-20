@@ -1,6 +1,7 @@
 <?php
 require_once ('../Login/protecao.php');
 require_once('conexao.php');
+$aviso = "";
 
 if (!isset($_GET['id'])) {
     header("Location: read_consultas.php");
@@ -21,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt = $conexao->prepare("UPDATE consulta SET paciente_nome = ?, servico = ?, data_consulta = ?, horario = ?, valor_consulta = ?, duracao = ? WHERE id_consulta = ?");
         $stmt->execute([$paciente_nome, $servico, $data, $horario, $valor, $duracao, $id]);
         header("Location: read_consultas.php");
+        $_SESSION['aviso'] = "Consulta editada com sucesso!";
         exit;
     } else {
         $error = "Todos os campos são obrigatórios.";

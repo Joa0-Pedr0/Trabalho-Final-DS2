@@ -1,6 +1,7 @@
 <?php
 require_once ('../Login/protecao.php');
 require_once('conexao.php');
+$aviso = '';
 
 if (!isset($_GET['id'])) {
     header("Location: read_pacientes.php");
@@ -16,11 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $observacao = trim($_POST['observacao']);
     $med = isset($_POST['med']) ? 1 : 0;
 
-    if (!empty($nome) && !empty($data) && !empty($procura) && !empty($observacao)) {
+    if (!empty($nome) && !empty($data) && !empty($procura)) {
         $stmt = $conexao->prepare("UPDATE paciente SET nome_paciente = ?, data_nasc = ?, motivo_procura = ?, medicacao_controlada = ?, observacoes = ? WHERE paciente_id = ?");
         $stmt->execute([$nome, $data, $procura, $med, $observacao, $id]);
-
         header("Location: read_pacientes.php");
+        $_SESSION['aviso'] = "Paciente editado com sucesso!";
+
         exit;
     } else {
         $error = "Preencha todos os campos obrigatórios!";

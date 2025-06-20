@@ -1,5 +1,6 @@
 <?php
 require_once('conexao.php');
+$aviso = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $paciente_id = $_POST['paciente'];
@@ -34,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             if ($enviar) {
                 header("Location: read_consultas.php");
+                $_SESSION['aviso'] = "Consulta cadastrada com sucesso!";
                 exit;
             } else {
                 $error = "Erro ao agendar a consulta. Tente novamente!";
