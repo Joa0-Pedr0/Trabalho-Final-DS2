@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #bcd4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    width: 620px;
+    max-width: 90%;
+}
+
+
+.form-title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    color: #1f2d3d;
+    margin-bottom: 30px;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #C1D3FE;
+    font-size: 14px;
+    color: #333;
+
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button-group button {
+    width: 48%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button-group button[type="button"] {
+    background-color: #dbe8ff;
+    color: #333;
+}
+
+.button-group button[type="button"]:hover {
+    background-color: #c7dbff;
+}
+
+.button-group button[type="submit"] {
+    background-color: #C1D3FE;
+    color: #1f2d3d;
+}
+
+.button-group button[type="submit"]:hover {
+    background-color: #c7dbff;
+}
+
+#Logo-container {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#Logo-img {
+  width: 70px;
+  height: 70px;
+}
+
+#erro {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#texto {
+    margin-top: 25px;
+}
