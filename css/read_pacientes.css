@@ -93,3 +93,11 @@ a {
     margin-bottom: 10px;
     padding-left: 10px;
 }
+
+#aviso {
+    color: rgba(56, 198, 54, 0.974);
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
