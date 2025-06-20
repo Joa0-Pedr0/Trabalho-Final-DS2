@@ -1,15 +1,15 @@
 body {
+
     margin: 0;
     padding: 0;
     background-color: #aac8ff;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
     margin: 60px auto;
     width: 80%;
     background-color: white;
-    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -29,7 +29,7 @@ thead {
 }
 
 th {
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     font-weight: bold;
     font-size: 16px;
 }
@@ -56,4 +56,40 @@ button {
 .btn-excluir {
     background-color: #ff8a8a;
     color: white;
+}
+
+#texto {
+    text-align: center;
+}
+#Logo-container {
+    display: flex;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#Logo-img {
+  width: 70px;
+  height: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#a{
+
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+#b {
+    margin-bottom: 10px;
+    padding-left: 10px;
 }
