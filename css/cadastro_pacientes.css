@@ -1,0 +1,114 @@
+body {
+    background-color: #c2d4fc;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px;
+}
+
+.form-card {
+    background-color: white;
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d0dcff;
+    font-size: 14px;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button[type="reset"] {
+    background-color: #dce7ff;
+    color: #000;
+}
+
+button[type="submit"] {
+    background-color: #9dbaff;
+    color: white;
+}
+
+#erro {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Logo-container {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#Logo-img {
+  width: 70px;
+  height: 70px;
+}
