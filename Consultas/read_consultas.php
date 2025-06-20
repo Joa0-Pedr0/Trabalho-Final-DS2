@@ -1,5 +1,16 @@
 <?php
 require_once('conexao.php');
+require_once('cadastro_consulta.php');
+
+session_start();
+$aviso = '';
+if (isset($_SESSION['aviso'])) {
+
+    $aviso = $_SESSION['aviso'];
+
+    unset($_SESSION['aviso']);
+}
+
 
 $stmt = $conexao->query("SELECT id_consulta, paciente_nome, valor_consulta FROM consulta");
 $consultas = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -23,6 +34,15 @@ $consultas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <div class="container">
         <h2 id="texto">Consultas agendadas</h2>
+        <div id="aviso">
+            <?php
+            if (isset($aviso)) {
+                if (!empty($aviso)) {
+                    echo $aviso;
+                }
+            }
+            ?>
+        </div>
         <div id="a">
         <i class="fa-solid fa-plus"></i>
         <a href="formulario.php">Nova consulta</a>

@@ -1,5 +1,16 @@
 <?php
 require_once('conexao.php');
+include_once('paciente_cadastro.php');
+
+session_start();
+$aviso = '';
+if (isset($_SESSION['aviso'])) {
+
+    $aviso = $_SESSION['aviso'];
+
+    unset($_SESSION['aviso']);
+}
+
 
 $stmt = $conexao->query("SELECT paciente_id, nome_paciente FROM paciente");
 $pacientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -23,13 +34,22 @@ $pacientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <div class="container">
         <h2 id="texto">Pacientes Cadastrados</h2>
+        <div id="aviso">
+            <?php
+            if (isset($aviso)) {
+                if (!empty($aviso)) {
+                    echo $aviso;
+                }
+            }
+            ?>
+        </div>
         <div id="a">
-        <i class="fa-solid fa-plus"></i>
-        <a href="formulario.php">Novo paciente</a>
+            <i class="fa-solid fa-plus"></i>
+            <a href="formulario.php">Novo paciente</a>
         </div>
         <div id="b">
-        <i class="fa-solid fa-arrow-left"></i>
-        <a href="../index.php">Voltar</a>
+            <i class="fa-solid fa-arrow-left"></i>
+            <a href="../index.php">Voltar</a>
         </div>
 
 
