@@ -5,7 +5,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome = trim($_POST['nome']);
     $data = trim($_POST['data']);
     $procura = trim($_POST['procura']);
-    $med = $_POST['med'];
+    if(isset($_POST['med'])){
+    $med = $_POST['med'] ? 1 : 0;
+    }
     $observacao = trim($_POST['observacao']);
     if (empty($nome)) {
         $error = "Preencha o nome do paciente!";
