@@ -1,8 +1,9 @@
 <?php
+require_once ('protecao.php');
 require_once('conexao.php');
 require_once('cadastro_consulta.php');
 
-session_start();
+
 $aviso = '';
 if (isset($_SESSION['aviso'])) {
 

@@ -1,5 +1,5 @@
 <?php
-require_once ('../Login/protecao.php');
+require_once ('protecao.php');
 require_once('conexao.php');
 $aviso = "";
 

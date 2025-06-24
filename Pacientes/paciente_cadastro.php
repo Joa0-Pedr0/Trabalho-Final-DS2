@@ -19,9 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $stmt = $conexao->prepare("INSERT INTO paciente (nome_paciente, data_nasc, motivo_procura, medicacao_controlada, observacoes) VALUES (?, ?, ?, ?, ?)");
             $enviar = $stmt->execute([$nome, $data, $procura, $med, $observacao]);
             if ($enviar) {
-                session_start();
                 header("Location: read_pacientes.php");
                  $_SESSION['aviso'] = "Paciente cadastrado com sucesso!";
+                 exit;
 
             } else {
                 $error = "Erro ao cadastrar o paciente. Tente novamente!";

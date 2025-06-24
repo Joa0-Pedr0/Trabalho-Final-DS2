@@ -1,8 +1,8 @@
 <?php
+include_once ('protecao.php');
 require_once('conexao.php');
 include_once('paciente_cadastro.php');
 
-session_start();
 $aviso = '';
 if (isset($_SESSION['aviso'])) {
 
